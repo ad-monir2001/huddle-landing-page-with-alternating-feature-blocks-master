@@ -16,10 +16,6 @@
   box-sizing: border-box;
 }
 
-body{
-  position: relative;
-}
-
 h1,
 h2 {
   font-family: var(--font-heading);
@@ -52,6 +48,10 @@ nav a {
   box-shadow: 2px 2px 5px rgb(175, 175, 175);
 }
 
+a:hover {
+  opacity: 0.7;
+}
+
 /** Style rule for hero section **/
 
 .hero {
@@ -62,7 +62,6 @@ nav a {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 5%;
-  /* gap: 1rem; */
 }
 
 .hero img {
@@ -122,21 +121,21 @@ nav a {
   margin: 1rem 0;
 }
 
-
 /** Style rule for card **/
 
-.card{
+.card {
   position: absolute;
   background: white;
   padding: 2rem 3rem;
   border-radius: 15px;
   box-shadow: -2px -2px 2px rgb(175, 175, 175);
-  left: 40%;
-  bottom: 264px;
+  left: 21%;
+  top: -78px;
+  width: 55%;
   text-align: center;
 }
 
-.card a{
+.card a {
   background: var(--Pink);
   padding: 1rem 3rem;
   border-radius: 25px;
@@ -146,16 +145,16 @@ nav a {
   margin-top: 1rem;
 }
 
-
 /** Style rule for footer **/
 
 footer {
   background: var(--Very-Dark-Cyan);
   color: var(--Very-Pale-Cyan);
-  padding: 4rem 5%;
+  padding: 8rem 5% 5rem;
+  position: relative;
 }
 
-.footer{
+.footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
@@ -165,4 +164,103 @@ footer {
 .address span {
   margin-left: 1rem;
   max-width: 10px;
+}
+
+.footer p {
+  margin-bottom: 0.7rem;
+  display: block;
+}
+
+.links-2 p:hover,
+.links-1 p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.icons i {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 10px;
+  margin-left: 0.5rem;
+}
+
+.icons i:hover {
+  color: var(--Pink);
+  cursor: pointer;
+}
+
+.copy-right {
+  text-align: right;
+  margin-top: 5rem;
+  font-size: 0.8rem;
+}
+
+/** Breakpoints **/
+
+@media (max-width: 375px) {
+  nav img {
+    width: 35%;
+  }
+
+  nav a {
+    padding: 0.5rem 2rem;
+  }
+
+  .hero {
+    background: url(./images/bg-hero-mobile.svg), var(--Very-Pale-Cyan);
+    padding: 1rem 5%;
+    flex-direction: column;
+    text-align: center;
+    gap: 4rem;
+  }
+
+  .hero img,
+  .about__1 img,
+  .about__2 img,
+  .about__3 img {
+    width: 90%;
+  }
+
+  .about__1,
+  .about__3 {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .about__2 {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .about__1__text,
+  .about__2__text,
+  .about__3__text {
+    margin-left: 0;
+  }
+
+  .card {
+    padding: 1rem;
+    left: 6%;
+    width: 90%;
+    text-align: center;
+  }
+
+  .copy-right {
+    text-align: center;
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    grid-gap: 1rem;
+  }
+
+  .card a {
+    padding: 1rem 2rem;
+    font-weight: 700;
+  }
 }
