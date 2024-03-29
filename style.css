@@ -16,6 +16,10 @@
   box-sizing: border-box;
 }
 
+body{
+  position: relative;
+}
+
 h1,
 h2 {
   font-family: var(--font-heading);
@@ -27,7 +31,7 @@ a,
 p,
 span {
   font-family: var(--font-paragraph);
-  color: var(--Very-Dark-Cyan);
+  text-decoration: none;
 }
 
 nav {
@@ -51,14 +55,114 @@ nav a {
 /** Style rule for hero section **/
 
 .hero {
-  background: url(./images/bg-hero-desktop.svg);
+  background: url(./images/bg-hero-desktop.svg), var(--Very-Pale-Cyan);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem 5%;
+  /* gap: 1rem; */
 }
 
 .hero img {
-  width: 100%;
+  width: 50%;
+}
+
+.hero__texts p {
+  max-width: 500px;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.hero__texts a {
+  background: var(--Pink);
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  color: white;
+  font-weight: 700;
+  display: inline-block;
+  box-shadow: 2px 2px 5px rgb(175, 175, 175);
+}
+
+/** Style rule for about section **/
+
+.about {
+  padding: 8rem 5%;
+}
+
+.about img {
+  width: 40%;
+}
+
+.about__1,
+.about__2,
+.about__3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 2px 5px rgb(175, 175, 175);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.about__1__text,
+.about__2__text,
+.about__3__text {
+  max-width: 450px;
+  margin-left: 4rem;
+}
+
+.about__1__text p,
+.about__2__text p,
+.about__3__text p {
+  color: var(--Grayish-Blue);
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+
+/** Style rule for card **/
+
+.card{
+  position: absolute;
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  box-shadow: -2px -2px 2px rgb(175, 175, 175);
+  left: 40%;
+  bottom: 264px;
+  text-align: center;
+}
+
+.card a{
+  background: var(--Pink);
+  padding: 1rem 3rem;
+  border-radius: 25px;
+  color: white;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+
+/** Style rule for footer **/
+
+footer {
+  background: var(--Very-Dark-Cyan);
+  color: var(--Very-Pale-Cyan);
+  padding: 4rem 5%;
+}
+
+.footer{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  grid-gap: 3rem;
+}
+
+.address span {
+  margin-left: 1rem;
+  max-width: 10px;
 }
